@@ -7,24 +7,24 @@ app = flask.Flask(__name__)
 def start():
   if flask.request.method == "POST":
     pokemon = flask.request.form["pokemon"]
-    pokemon = pokemon.lower()
-    if pokemon in list(database.keys()):
-      abilities = []
-      for i in database[pokemon]["abilities"]:
-        abilities.append(i ["name"])
-      return flask.render_template(
-        "result.html",
-        idvalue = database[pokemon]["id"],
-        namevalue = database[pokemon]["name"], 
-        heightvalue = database[pokemon]["height"],   
-        weightvalue = database[pokemon]["weight"],      
-        imgvalue = database[pokemon]["image_url"],    
-        xpvalue = database[pokemon]["xp"],    
-        urlvalue = database[pokemon]["pokemon_url"],
-        abilities = ", ".join(abilities),  
-        hp = database[pokemon]["stats"][0]["base_stat"],
-        data = database[pokemon]
-        )
+    if pokemon in database
+    # id_value = database[pokemon]["id"]
+    abilities = []
+    for i in database[pokemon]["abilities"]:
+      abilities.append(i ["name"])
+    return flask.render_template(
+      "result.html",
+       idvalue = database[pokemon]["id"],
+       namevalue = database[pokemon]["name"], 
+       heightvalue = database[pokemon]["height"],   
+       weightvalue = database[pokemon]["weight"],      
+       imgvalue = database[pokemon]["image_url"],    
+       xpvalue = database[pokemon]["xp"],    
+       urlvalue = database[pokemon]["pokemon_url"],
+       abilities = ", ".join(abilities),  
+       hp = database[pokemon]["stats"][0]["base_stat"],
+       data = database[pokemon]
+       )
   return flask.render_template("index.html")
 app.run("0.0.0.0") 
 # {'id': 25, 'name': 'pikachu', 'height': 40, 'weight': 60, 'xp': 112, 'image_url': 

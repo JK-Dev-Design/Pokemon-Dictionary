@@ -7,8 +7,7 @@ app = flask.Flask(__name__)
 def start():
   if flask.request.method == "POST":
     pokemon = flask.request.form["pokemon"]
-    pokemon = pokemon.lower()
-    if pokemon in list(database.keys()):
+      if pokemon in list(database.keys()):
       abilities = []
       for i in database[pokemon]["abilities"]:
         abilities.append(i ["name"])

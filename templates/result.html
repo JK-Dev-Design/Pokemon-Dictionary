@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="poke.png">
+  <title>Document</title>
+
+  <style>
+      * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
+  color: #444
+}
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F3F8F7 49.91%, #FFF9F5 94.19%);
+}
+img {
+  width: 96px;
+  height: 96px;
+}
+a {
+  text-decoration: none;
+}
+ul, li, ol {
+  list-style: none;
+}
+.container {
+ padding: 0 10%; 
+ width: 1000px;
+ margin: auto; 
+ overflow: hidden;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>{{namevalue}}</h1>
+    <p><strong>ID:</strong> {{idvalue}}</p>
+    <p><strong>HP:</strong> {{hp}}</p>
+    <!-- <img src="{{imgvalue}}" alt=""> -->
+    <p><strong>XP:</strong> {{xpvalue}}</p>
+    <p><strong>Height:</strong> {{heightvalue}}</p>
+    <p><strong>Weight:</strong> {{weightvalue}}</p>
+    <p><strong>Abilities:</strong> {{abilities}}</p>
+    <p><strong>Abilities:</strong> {{abilities}}</p>
+    <p><strong>Link:</strong> <a href={{ urlvalue }}>{{namevalue}}</a></p>
+    <p>{{data}}</p>
+</body>
+</html>
